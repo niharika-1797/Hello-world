@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int findGCD(int a, int b) {
+        if (b == 0) {
+        return a;
+    }
+        return findGCD(b, a % b);
+}
+
+int main() {
+    int num1, num2;
+   Printf (“reg no:25331A05H5 \n”);
+    printf("Enter two positive integers: ");
+    if (scanf("%d %d", &num1, &num2) != 2) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+        printf("The G.C.D of %d and %d is %d.\n", num1, num2, findGCD(num1, num2));
+
+    return 0;
+}
