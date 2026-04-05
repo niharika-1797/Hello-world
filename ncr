@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int fact(int n)
+{
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * fact(n - 1);
+}
+
+int main()
+{
+    int n, r;
+    int ncr;
+    printf (“reg no:25331A05H5 \n”);
+    printf("Enter value of n and r (n > r): ");
+    scanf("%d %d", &n, &r);
+
+    ncr = fact(n) / (fact(r) * fact(n - r));
+
+    printf("nCr value = %d\n", ncr);
+
+    return 0;
+}
